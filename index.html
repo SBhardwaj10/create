@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 80%; /* Set container width to 80% of viewport width */
+            max-width: 400px; /* Set maximum width to 400px to prevent container from stretching too much */
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .input-group label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Sign Up</h2>
+        <div class="input-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" placeholder="Enter your first name">
+        </div>
+        <div class="input-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" placeholder="Enter your last name">
+        </div>
+        <div class="input-group">
+            <label for="father-name">Father's Name:</label>
+            <input type="text" id="father-name" placeholder="Enter your father's name">
+        </div>
+        <div class="input-group">
+            <label for="mother-name">Mother's Name:</label>
+            <input type="text" id="mother-name" placeholder="Enter your mother's name">
+        </div>
+        <div class="input-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob">
+        </div>
+        <div class="input-group">
+            <label for="gmail">Gmail:</label>
+            <input type="email" id="gmail" placeholder="Enter your Gmail">
+        </div>
+        <div class="input-group">
+            <label for="linkedin">LinkedIn ID:</label>
+            <input type="text" id="linkedin" placeholder="Enter your LinkedIn ID">
+        </div>
+        <div class="input-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number">
+        </div>
+        <button class="btn" onclick="createAccount()">Create</button>
+        <div class="error-message" id="error-message"></div>
+    </div>
+
+    <script>
+        function createAccount() {
+            // Validate input fields (for simplicity, only check if fields are filled)
+            var firstName = document.getElementById('first-name').value;
+            var lastName = document.getElementById('last-name').value;
+            var fatherName = document.getElementById('father-name').value;
+            var motherName = document.getElementById('mother-name').value;
+            var dob = document.getElementById('dob').value;
+            var gmail = document.getElementById('gmail').value;
+            var linkedin = document.getElementById('linkedin').value;
+            var phone = document.getElementById('phone').value;
+
+            if (!firstName || !lastName || !fatherName || !motherName || !dob || !gmail || !linkedin || !phone) {
+                document.getElementById('error-message').innerText = 'Invalid contact to BHARDWAJ. Please fill in all fields.';
+            } else {
+                document.getElementById('error-message').innerText = 'Invalid contact BHARDWAJ.';
+            }
+        }
+    </script>
+</body>
+</html>
